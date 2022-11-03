@@ -34,10 +34,3 @@ def __str__(self):
 		else:
 			return f'{self.content}'
    
-
-  
-		
-                
-    
-        
-        

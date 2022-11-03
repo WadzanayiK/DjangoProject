@@ -1,9 +1,17 @@
-from django.contrib import admin
-from django.urls import path, include
-from musicapp import urls as musicapp_urls
+from django.urls import path
 
-urlpatterns = [
-    path("admin/", admin.site.urls),
-    path('api-auth/', include('rest_framework.urls')),
-    path('',include ('musicapp.urls'))
-]
+from . import views
+
+
+
+
+from .views import ArtisteView
+from .views import SongView
+from .views import LyricView
+from django.urls import path  
+  
+urlpatterns = [  
+    path('api/', ArtisteView.as_view()),
+    path('api/', SongView.as_view()),
+    path('api/', LyricView.as_view())
+]  
